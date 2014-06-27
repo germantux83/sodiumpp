@@ -89,7 +89,7 @@ namespace sodiumpp {
         std::string bytes;
         bool overflow;
     public:
-        static_assert(constantbytes < crypto_box_NONCEBYTES and sequentialbytes <= crypto_box_NONCEBYTES and constantbytes + sequentialbytes == crypto_box_NONCEBYTES, "constantbytes + sequentialbytes needs to be equal to crypto_box_NONCEBYTES and sequentialbytes needs to be greater than 0");
+        //static_assert(constantbytes < crypto_box_NONCEBYTES and sequentialbytes <= crypto_box_NONCEBYTES and constantbytes + sequentialbytes == crypto_box_NONCEBYTES, "constantbytes + sequentialbytes needs to be equal to crypto_box_NONCEBYTES and sequentialbytes needs to be greater than 0");
         nonce() : nonce("") {}
         nonce(const std::string& constant, bool uneven) : bytes(constant), overflow(false) {
             if(constant.size() > 0 and constant.size() != constantbytes) {
